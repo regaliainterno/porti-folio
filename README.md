@@ -1,73 +1,55 @@
-# Welcome to your Lovable project
+# Porti-folio
 
-## Project info
+Porti-folio é o meu portfólio interativo construído com Vite, React + TypeScript, shadcn-ui e Tailwind CSS. O projeto destaca experiência, projetos e contato em uma única página elegante e responsiva.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## Tecnologias
 
-## How can I edit this code?
+- Vite (bundler moderno)
+- React com TypeScript
+- shadcn-ui (componentes Radix + Tailwind)
+- Tailwind CSS + tailwindcss-animate
+- Framer Motion, recharts e Radix UI em zonas específicas
 
-There are several ways of editing your application.
+## Rodando localmente
 
-**Use Lovable**
+1. Instale as dependências:
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+   ```bash
+   npm install
+   ```
 
-Changes made via Lovable will be committed automatically to this repo.
+2. Inicie o servidor de desenvolvimento com hot reload:
 
-**Use your preferred IDE**
+   ```bash
+   npm run dev
+   ```
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+3. Abra `http://localhost:5173` (ou o host/porta que o Vite imprimir).
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## Scripts úteis
 
-Follow these steps:
+- `npm run dev` — roda o servidor de desenvolvimento.
+- `npm run build` — gera a versão otimizada em `dist/`.
+- `npm run preview` — serve `dist/` localmente para revisar a build.
+- `npm run lint` — executa o ESLint em todo o código.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## Deploy
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+1. Empurre o repositório para o GitHub (ou outro serviço Git).
+2. Conecte o repositório ao Netlify, Vercel ou semelhante:
+   - Build command: `npm run build`
+   - Publish directory: `dist`
+   - Habilite deploy automático com branches protegidas conforme necessário.
+3. Adicione domínios personalizados e variáveis de ambiente direto no painel da plataforma de hospedagem.
 
-# Step 3: Install the necessary dependencies.
-npm i
+## Atualizando o conteúdo
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+- `src/pages/Index.tsx`: conteúdo principal, seções e textos.
+- `src/components/*`: componentes como Hero, projetos, contato, footer.
+- `src/main.tsx` e `src/App.css`: ponto de entrada e estilos globais.
+- `public/`: imagens fixas, favicon e assets estáticos.
+- `index.html`: metas, fontes e favicons que aparecem em redes sociais.
 
-**Edit a file directly in GitHub**
+## Nota
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Sempre rode `npm run build` antes de realizar o deploy e revise `dist/` para garantir que nenhuma asset esteja faltando.
